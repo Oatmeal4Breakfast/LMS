@@ -1,6 +1,4 @@
 from uuid import UUID
-from dataclasses import dataclass
-from typing import Optional
 
 from src.core.logging import get_logger
 from src.adapters.unit_of_work import UnitOfWork
@@ -12,12 +10,6 @@ from src.exceptions import (
 )
 
 logger = get_logger(__name__)
-
-
-@dataclass(frozen=True)
-class LessonUpdate:
-    title: Optional[str] = None
-    material_path: Optional[str] = None
 
 
 class LessonService:
